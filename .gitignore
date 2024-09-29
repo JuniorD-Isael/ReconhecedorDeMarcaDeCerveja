@@ -1,0 +1,30 @@
+# Ignorar dependências e arquivos de build da API 1 (Nest.js)
+api1_nest/node_modules/
+api1_nest/dist/
+api1_nest/.env
+api1_nest/.npmrc
+api1_nest/package-lock.json
+
+# Ignorar dependências e arquivos de build da API 2 (Python)
+api2_python/__pycache__/
+api2_python/.venv/
+api2_python/.env
+api2_python/poetry.lock
+
+# Ignorar arquivos de configuração do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar arquivos temporários
+*.tmp
+*.temp
+
+# Ignorar diretórios e arquivos de configuração do editor
+.vscode/
+.idea/
+*.swp
+*.swo
+

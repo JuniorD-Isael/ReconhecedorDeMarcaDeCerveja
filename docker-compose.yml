@@ -1,0 +1,23 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  api1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api1_builder
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api2
+
+  api2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api2_builder
+    ports:
+      - "8000:8000"
+
