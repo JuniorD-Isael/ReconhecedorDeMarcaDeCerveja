@@ -4,35 +4,41 @@ Este repositório contém duas APIs que compõem o sistema de reconhecimento de 
 
 ## Estrutura do Projeto
 
+A estrutura do projeto é organizada da seguinte maneira:
 
-ProjetoVaiNaWeb
-├── api1_nest         # API 1 em Nest.js
-│   ├── src           # Código-fonte da API 1
-│   ├── Dockerfile     # Dockerfile para a API 1
-│   ├── package.json   # Dependências da API 1
-│   └── ...
-└── api2_python       # API 2 em Python (FastAPI)
-    ├── app           # Código-fonte da API 2
-    ├── Dockerfile     # Dockerfile para a API 2
-    ├── pyproject.toml # Dependências da API 2
-    └── ...
-└── docker-compose.yml # Orquestração das APIs
+- **ProjetoVaiNaWeb/**
+  - **api1_nest/** (Diretório da API 1 - Nest.js)
+    - **src/** (Código fonte da API 1)
+    - **package.json** (Dependências da API 1)
+    - **nest-cli.json** (Configurações do Nest CLI)
+    - **tsconfig.json** (Configuração do TypeScript)
+    - Outros arquivos e pastas
+  - **api2_python/** (Diretório da API 2 - Python)
+    - **app/** (Código fonte da API 2)
+    - **pyproject.toml** (Dependências da API 2)
+    - **poetry.lock** (Lock file do Poetry)
+    - Outros arquivos e pastas
+  - **docker-compose.yml** (Arquivo de configuração do Docker Compose)
 
 
 ## Tecnologias Utilizadas
 
 ### API 1 - Nest.js
 
+- **Repositório dedicado** [aqui](https://github.com/JuniorD-Isael/api1_nest)
 - **Framework**: [Nest.js](https://nestjs.com/)
 - **Linguagem**: TypeScript
 - **Banco de Dados**: (SQLite3)
 
+
 ### API 2 - Python
 
+- **Repositório dedicado** [aqui](https://github.com/JuniorD-Isael/api2_python)
 - **Framework**: [FastAPI](https://fastapi.tiangolo.com/)
 - **Linguagem**: Python
 - **OCR**: [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
 - **Gerenciador de Pacotes**: [Poetry](https://python-poetry.org/)
+
 
 ## Arquitetura
 
@@ -44,7 +50,7 @@ ProjetoVaiNaWeb
 1. **Clone o Repositório**
 
    ```bash
-   git clone <URL_do_repositório>
+   git clone https://github.com/JuniorD-Isael/ReconhecedorDeMarcaDeCerveja
    cd ProjetoVaiNaWeb
    ```
 
