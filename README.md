@@ -50,8 +50,8 @@ A estrutura do projeto é organizada da seguinte maneira:
 1. **Clone o Repositório**
 
    ```bash
-   git clone https://github.com/JuniorD-Isael/ReconhecedorDeMarcaDeCerveja
-   cd ProjetoVaiNaWeb
+   git clone --recurse-submodules https://github.com/JuniorD-Isael/ReconhecedorDeMarcaDeCerveja.git
+   cd ReconhecedorDeMarcaDeCerveja
    ```
 
 2. **Instale o Docker e Docker Compose**
