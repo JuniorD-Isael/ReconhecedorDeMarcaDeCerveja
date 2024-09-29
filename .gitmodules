@@ -1,0 +1,7 @@
+[submodule "api1_nest"]
+    path = api1_nest
+    url = https://github.com/JuniorD-Isael/api1_nest.git
+
+[submodule "api2_python"]
+    path = api2_python
+    url = https://github.com/JuniorD-Isael/api2_python.git
