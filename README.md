@@ -1,4 +1,4 @@
-# Projeto Vai Na Web
+# Reconhecedor de marcas de cerveja
 
 Este repositório contém duas APIs que compõem o sistema de reconhecimento de marcas de cerveja, implementadas em diferentes tecnologias.
 
@@ -20,7 +20,6 @@ A estrutura do projeto é organizada da seguinte maneira:
     - Outros arquivos e pastas
   - **docker-compose.yml** (Arquivo de configuração do Docker Compose)
 
-
 ## Tecnologias Utilizadas
 
 ### API 1 - Nest.js
@@ -28,8 +27,7 @@ A estrutura do projeto é organizada da seguinte maneira:
 - **Repositório dedicado** [aqui](https://github.com/JuniorD-Isael/api1_nest)
 - **Framework**: [Nest.js](https://nestjs.com/)
 - **Linguagem**: TypeScript
-- **Banco de Dados**: (SQLite3)
-
+- **Banco de Dados**: SQLite3
 
 ### API 2 - Python
 
@@ -38,7 +36,6 @@ A estrutura do projeto é organizada da seguinte maneira:
 - **Linguagem**: Python
 - **OCR**: [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
 - **Gerenciador de Pacotes**: [Poetry](https://python-poetry.org/)
-
 
 ## Arquitetura
 
@@ -68,6 +65,42 @@ A estrutura do projeto é organizada da seguinte maneira:
 
    - API 1: [http://localhost:3000](http://localhost:3000)
    - API 2: [http://localhost:8000](http://localhost:8000)
+
+## Como Usar a API de Reconhecimento de Marca de Cerveja
+
+A API permite processar uma imagem de uma lata de cerveja, identificar e retornar o nome da marca. Você pode interagir com ela de três maneiras: usando **Postman**, **Insomnia**, ou via **terminal** com `cURL`.
+
+### 1. Via Postman
+
+- **Método**: `POST`
+- **URL**: `http://localhost:8000/process-image`
+- **Body**: `form-data`
+  - Campo `file`: faça o upload da imagem
+
+### 2. Via Insomnia
+
+- **Método**: `POST`
+- **URL**: `http://localhost:8000/process-image`
+- **Body**: `Multipart`
+  - Campo `file`: faça o upload da imagem
+
+### 3. Via Terminal (Usando cURL)
+
+Execute o seguinte comando, substituindo `<caminho-para-a-imagem>` pelo caminho da imagem que deseja processar:
+
+```bash
+curl -X POST "http://localhost:8000/process-image" -F "file=@<caminho-para-a-imagem>"
+```
+
+### Resposta Esperada
+
+A resposta será um JSON contendo o nome da marca detectada:
+
+```json
+{
+  "brandName": "Nome da marca detectada"
+}
+```
 
 ## Contribuição
 
