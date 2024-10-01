@@ -98,7 +98,11 @@ A resposta será um JSON contendo o nome da marca detectada:
 
 ```json
 {
-  "brandName": "Nome da marca detectada"
+"filename": "nome_do_arquivo.png",
+"brandName": "Nome da marca detectada",
+"created_at": "2024-10-01T01:46:22.515Z",
+"imagePath": "uploads/nome_do_arquivo.png",
+"id": 6
 }
 ```
 ## Como Ver Todos os Registros Salvos no Banco de Dados
