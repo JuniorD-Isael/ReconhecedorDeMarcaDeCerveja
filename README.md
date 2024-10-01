@@ -101,6 +101,15 @@ A resposta será um JSON contendo o nome da marca detectada:
   "brandName": "Nome da marca detectada"
 }
 ```
+## Como Ver Todos os Registros Salvos no Banco de Dados
+
+Para visualizar todos os registros que já foram salvos no banco de dados, você pode acessar a seguinte rota:
+
+- **URL**: [http://localhost:3000/logs](http://localhost:3000/logs)
+- **Método**: `GET`
+
+Essa rota retornará uma lista com todos os logs armazenados no banco de dados, incluindo detalhes como `filename`, `brand`, `created_at`, e `imagePath`.
+
 
 ## Contribuição
 
