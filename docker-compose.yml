@@ -1,4 +1,16 @@
 services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: cervejas
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
   api1:
     build:
       context: ./api1_nest
@@ -9,6 +21,11 @@ services:
       - ./api1_nest:/app
     environment:
       NODE_ENV: development
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USER: user
+      DATABASE_PASSWORD: password
+      DATABASE_NAME: cervejas
 
   api2:
     build:
@@ -20,3 +37,6 @@ services:
       - ./api2_python:/app
     environment:
       PYTHONUNBUFFERED: 1
+
+volumes:
+  postgres_data:
